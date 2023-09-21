@@ -1,0 +1,3 @@
+Tôi đã hack được database của máy chủ này và biết được tài khoản của admin. Tuy nhiên mật khẩu đã bị mã hóa, tôi bất lực :v
+
+5d7845ac6ee7cfffafc5fe5f35cf666d

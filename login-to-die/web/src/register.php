@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($sth->num_rows() > 0) {
             $message = "Tên đăng nhập đã tồn tại";
         } else {
-            $sql = "INSERT INTO users(username, password, email) VALUES (?, ?, ?)";
+            $sql = "INSERT INTO users(username, password, email) VALUES (?, MD5(?), ?)";
             $sth = $database->prepare($sql);
             $sth->bind_param('sss', $_POST['username'], $_POST['password'], $_POST['email']);
             $sth->execute();

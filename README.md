@@ -5,8 +5,8 @@
 Challenge board: 
 | ID | NAME | TYPE | COMPLEXITY | LINK |
 |---|---|---|---|---|
-|1|Password is so strong| Web + Crypto| Easy | [Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/login-to-die)|
-|2|Gem count|Web|Easy|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/gem-count)|
+|1|Password is so strong| Web + Crypto| ⭐ | [Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/login-to-die)|
+|2|Gem count|Web|⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/gem-count)|
 
 # Instructions for installing Docker (Linux)
 

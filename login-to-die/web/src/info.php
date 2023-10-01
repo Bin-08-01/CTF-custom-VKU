@@ -1,21 +1,28 @@
 <?php
-    session_start();
-    if(isset($_SESSION["username"])){
-        if($_SESSION['username'] == "admin"){
-            try{
-                include "db.php";
-                $sql = "SELECT * FROM secret";
-                $result = $database->query($sql);
+    include "db.php";
 
-                if($result->num_rows > 0){
-                    $data = $result->fetch_assoc()["content"];
+    session_start();
+if(isset($_SESSION["username"])){
+    if($_SESSION['username'] == "admin"){
+
+            try{
+                $sql = "SELECT content FROM secret";
+                $sth = $database->prepare($sql);
+                $sth->execute();
+                $sth->store_result();
+                $sth->bind_result($result);
+                if($sth->num_rows > 0) {
+                    $sth->fetch();
+                    $data = $result;
+                }else{
                 }
+
             } catch(mysqli_sql_exception $e){
-                
+                echo $e;
             }
         }
     }else{
-        header("location: index.php");
+        $data = "Bạn phải là admin mới được xem flag";
     }
 ?>
 

@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 /* Directory tree of source code:
 .
 ├── download.php
@@ -18,19 +20,23 @@ if (isset($_GET['debug'])) {
     die(highlight_file('index.php'));
 }
 
-session_start();
 
 if (isset($_POST['reset'])) {
     session_destroy();
-    header("Location: index.php");
+    echo '<meta http-equiv="refresh" content="0;url=index.php">';
 }
 
 if (isset($_FILES['file'])) {
     $file = $_FILES['file'];
-
-    if ($file['error'] === UPLOAD_ERR_OK) {
-        $data = file_get_contents($file['tmp_name']);
-        $_SESSION['students'] = $data;
+    $name = $_FILES["file"]["name"];
+    $ext = end((explode(".", $name))); 
+    if ($ext == "dat"){
+        if ($file['error'] === UPLOAD_ERR_OK) {
+            $data = file_get_contents($file['tmp_name']);
+            $_SESSION['students'] = $data;
+        }
+    }else{
+        die ("Just upload file .dat");
     }
 }
 
@@ -38,6 +44,7 @@ if (isset($_POST['id']) && isset($_POST['name']) && isset($_POST['gender'])) {
     $newStudent = new Student($_POST['id'], $_POST['name'], $_POST['gender']);
 
     $serializedData = serialize($newStudent);
+    echo $serializedData;
     if (isset($_SESSION['students'])) {
         $_SESSION['students'] .= '|' . $serializedData; 
     }else{
@@ -49,7 +56,6 @@ if (isset($_SESSION['students'])) {
     $data = $_SESSION['students'];
     $students = explode("|", $data);
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +113,7 @@ if (isset($_SESSION['students'])) {
         
             <h3>Thông tin sinh viên</h3>
             <form action="download.php" method="POST">
-                <textarea name="data" id="data" hidden cols="30" rows="10"><?php echo $_SESSION['students']; ?></textarea>
+                <textarea name="data" id="data" hidden cols="30" rows="10"></textarea>
                 <button type="submit" class="btn btn-info">Xuất file</button>
             </form>
             <table>

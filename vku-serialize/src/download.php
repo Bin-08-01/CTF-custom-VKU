@@ -1,6 +1,8 @@
 <?php 
+session_start();
+
 if (isset($_POST["data"])) {
-    $result = $_POST["data"];
+    $result = $_SESSION['students'];
     $filename = 'students.dat';
 
     header("Content-Type: text/plain");

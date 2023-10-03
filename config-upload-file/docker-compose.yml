@@ -1,0 +1,10 @@
+version: "3.6"
+services:
+  config-upload:
+    build: ./
+    restart: unless-stopped
+    ports:
+      - "8091:80"
+    volumes:
+      - ./src:/var/www/html
+      - /var/www/html/upload

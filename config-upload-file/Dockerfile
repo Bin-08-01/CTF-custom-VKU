@@ -13,4 +13,4 @@ RUN find . -type d -exec chmod 750 {} \;
 
 RUN chmod g+w /var/www/html/upload/
 RUN chmod +t -R /var/www/html/
-RUN echo "VKU{conf1g_1s_n33d3d_t0_pr0t3ct_y0ur_5yst3m}" > /flag.txt
+RUN echo "VKU{fake_flag}" > /flag.txt

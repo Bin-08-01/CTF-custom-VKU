@@ -5,11 +5,11 @@
 Challenge board: 
 | ID | NAME | TYPE | COMPLEXITY | LINK |
 |---|---|---|---|---|
-|1|Password is so strong| Web + Crypto|⭐⭐| [Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/login-to-die)|
-|2|Gem count|Web|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/gem-count)|
-|3|VKU Serialize|Web|⭐⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/vku-serialize)|
-|4|Config Upload File|Web|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/config-upload-file)|
-|5|Overload Interger|PWN|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/overload-pwn)|
+|1|Password is so strong| Web + Crypto|⭐⭐| [Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/Web/login-to-die)|
+|2|Gem count|Web|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/Web/gem-count)|
+|3|VKU Serialize|Web|⭐⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/Web/vku-serialize)|
+|4|Config Upload File|Web|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/Web/config-upload-file)|
+|5|Overload Interger|PWN|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/PWN/overload-pwn)|
 
 # Instructions for installing Docker (Linux)
 

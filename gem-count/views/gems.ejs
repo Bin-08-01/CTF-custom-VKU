@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gem Count Viewer</title>
+    <title>Tài khoản</title>
     <%- include('style') %>
 </head>
 
 <body>
     <div>
         <h2>
-            Gem Count
+            Số đá quý
         </h2>
         <p>
             <image src="https://help.supercellsupport.com/uploads/bs-payments.png"></image>
@@ -19,9 +19,9 @@
         </p>
 
         <% if(!isNaN(parseInt(gems)) && parseInt(gems) > 1000) { %>
-            <p>Welcome to the cool kids' club! The flag is <%= flag %> </p>
+            <p>Chúc mừng bạn, bạn quá may mắn. Đây là cờ của bạn: <b><%= flag %></b></p>
         <% } else { %>
-            <p>You don't have enough gems for the cool kids' club </p>
+            <p>Bạn chưa đủ may mắn, lần sau nhé.</p>
         <% } %>
     </div>
 </body>

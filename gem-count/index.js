@@ -12,6 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 app.enable("trust proxy");
 app.set('view engine', 'ejs');
 
+app.get("/", (req, res) => {
+    res.render('index');
+});
+
 app.post("/register", (req, res) => {
     if (req.body.userid && req.body.password && !isNaN(parseInt(req.body.userid)) && parseInt(req.body.userid) > 0) {
         let queryres = execQuery(`INSERT INTO users VALUES(${parseInt(req.body.userid)}, "${req.body.password}"); INSERT INTO gemdata VALUES(${Math.floor(1000 * Math.random())}, ${parseInt(req.body.userid)});`);
@@ -30,6 +34,8 @@ app.post("/register", (req, res) => {
 app.get("/register", (req, res) => {
     res.render('register');
 });
+
+
 
 app.post('/gems', (req, res) => {
     if (req.body.userid && req.body.password) {
@@ -50,9 +56,19 @@ app.get("/login", (req, res) => {
     res.render('login');
 });
 
-app.get("/", (req, res) => {
-    res.render('index');
-});
+app.get("/source", (req, res) => {
+    fs.readFile("./index.js", 'utf8', (err, data) => {
+        if (err) {
+            res.statusCode = 500;
+            res.end('Internal Server Error');
+            return;
+        }
+
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end(data);
+    });
+})
 
 app.get("/*", (req, res) => {
     res.redirect('/');
@@ -61,11 +77,6 @@ app.get("/*", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
-
-/* docker will be doing this step
-if (!fs.existsSync('data.db')) {
-    child.execSync(`sqlite3 data.db < schema.sql`);
-}*/
 
 function sanitize(input) {
     return `${input}`.replace('\n', '').replace('\r', '').replace('--', '');

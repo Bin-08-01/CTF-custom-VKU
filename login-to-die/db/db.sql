@@ -11,7 +11,7 @@ CREATE TABLE secret (
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO secret (`id`, `content`) VALUES (1, 'VKU{disclosure_vulnerability_1s_so_dang3r}');
+INSERT INTO secret (`id`, `content`) VALUES (1, 'VKU{fake_flag}');
 
 DROP TABLE IF EXISTS `users`;
 

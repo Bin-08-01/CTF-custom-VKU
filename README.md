@@ -9,6 +9,7 @@ Challenge board:
 |2|Gem count|Web|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/gem-count)|
 |3|VKU Serialize|Web|⭐⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/vku-serialize)|
 |4|Config Upload File|Web|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/config-upload-file)|
+|5|Overload Interger|PWN|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/overload-pwn)|
 
 # Instructions for installing Docker (Linux)
 

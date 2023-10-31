@@ -10,10 +10,10 @@ Challenge board:
 |3|VKU Serialize|Web|⭐⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/Web/vku-serialize)|
 |4|Config Upload File|Web|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/Web/config-upload-file)|
 |5|Overload Interger|PWN|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/PWN/overload-pwn)|
-|6|RSA Begin|Crypto|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/PWN/overload-pwn)|
-|7|Buffer Overflow Begin|PWN|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/PWN/overload-pwn)|
-|8|Baby Rev 1|Reverse Engineer|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/PWN/overload-pwn)|
-|9|Baby Rev 2|Reverse Engineer|⭐⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/PWN/overload-pwn)|
+|6|RSA Begin|Crypto|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/Cryptography/rsa-beginner)|
+|7|Buffer Overflow Begin|PWN|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/PWN/bof-begin)|
+|8|Baby Rev 1|Reverse Engineer|⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/Reverse/babyrev1)|
+|9|Baby Rev 2|Reverse Engineer|⭐⭐⭐|[Link](https://github.com/Bin-08-01/CTF-custom-VKU/tree/main/Reverse/babyrev2)|
 
 # Instructions for installing Docker (Linux)
 

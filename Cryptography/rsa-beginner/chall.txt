@@ -1,0 +1,7 @@
+I'm tracking a group of cyber criminals. I tried and caught a message between them. However, it's just strange numbers 😵‍💫.
+Help me find out what they're talking about and you'll receive a medal of honor from me 🥇.
+
+
+n = 7639395110016070417
+e = 65537
+c = 6384239240404764387

@@ -5,11 +5,12 @@ int main()
     FILE *file;
     long long number;
     file = fopen("flag.txt", "r");
-    char flag[100];
+    char flag[100]; 
 
     if (file == NULL)
     {
         printf("Cannot open file 'flag.txt'\n");
+        fflush(stdout);
         return 1;
     }
 
@@ -30,7 +31,7 @@ int main()
     {
         printf("Congratulations, you are the best hacker I know\n");
         printf("Here is your flag: ");
-        fflush(stdout); 
+        fflush(stdout);
 
         fgets(flag, 100, file);
         puts(flag);

@@ -24,6 +24,6 @@ Challenge board:
 2. `sudo apt-get install docker.io`
 3. `sudo systemctl start docker && sudo systemctl enable docker`
 4. `docker --version`
-5. `sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr /local/bin/docker-compose`
+5. `sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
 6. `sudo chmod +x /usr/local/bin/docker-compose`
 7. `docker-compose --version`

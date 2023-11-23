@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin người dùng</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Thông tin người dùng</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-danger">ID: <%= user.idUser %></h5>
+                <h5 class="card-title">Họ và tên:</h5>
+                <p class="d-inline-block">
+                    <%= user.name %>
+                </p>
+                <h5 class="card-title">Email:</h5>
+                <p class="d-inline-block">
+                    <%= user.email %>
+                </p>
+                <h5 class="card-title">Ghi chú:</h5>
+                <p class="d-inline-block">
+                    <%= user.description %>
+                </p>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

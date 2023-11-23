@@ -1,0 +1,27 @@
+version: "3.6"
+services:
+    db:
+        build: ./db
+        command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8 --collation-server=utf8_unicode_ci
+        restart: unless-stopped
+        expose:
+            - 3306
+        environment:
+            - MYSQL_ROOT_PASSWORD=vku_ctf_password_is_not_iz
+            - MYSQL_DATABASE=sqlvsl
+            - MYSQL_USER=db_user
+            - MYSQL_PASSWORD=db_password
+
+    sqllab:
+        build: ./web
+        restart: unless-stopped
+        ports:
+            - 80:80
+        volumes:
+            - ./web/src:/var/www/html
+        environment:
+            - MYSQL_HOSTNAME=db
+            - MYSQL_ROOT_PASSWORD=vku_ctf_password_is_not_iz
+            - MYSQL_DATABASE=sqlvsl
+            - MYSQL_USER=db_user
+            - MYSQL_PASSWORD=db_password

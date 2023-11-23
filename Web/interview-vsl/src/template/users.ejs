@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách người dùng</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="" style="margin: 80px 20px 60px">
+        <h1 class="d-inline-block">Danh sách người dùng</h1>
+        <a href="/user/20" class="btn btn-danger float-right">Xem ghi chú của bạn</a>
+    </div>
+    <% if (users.length===0) { %>
+        <p>There are no users</p>
+        <% } else { %>
+            <ul class="d-flex flex-wrap" style="list-style: none;">
+                <% users.forEach(user=> { %>
+                    <li class="col-3">
+                        <div class="card mb-3" style="max-width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= user.name %>
+                                </h5>
+                                <p>ID: <%= user.idUser %></p>
+                                <p class="card-text"></p>
+                                <a href="/user/<%= user.idUser %>" onclick="handleClick('<%= user.idUser %>')" class="btn btn-info">Xem người dùng này</a>
+                            </div>
+                        </div>
+                    </li>
+                    <% }); %>
+            </ul>
+            <% } %>
+    <script>
+        function handleClick(idUser) {
+            if (idUser == 20) {
+                return;
+            }
+            event.preventDefault();
+            alert("Bạn không có quyền xem thông tin của người dùng này!!!");
+        }
+    </script>
+</body>
+
+</html>
